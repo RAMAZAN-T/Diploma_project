@@ -145,7 +145,6 @@ class MainWindow(QMainWindow):
         self.show()
         
     def show_countermeasures(self):
-        # Use the imported function to get the countermeasures text
         countermeasures_text = get_countermeasure()
         QMessageBox.information(self, "Countermeasures", countermeasures_text)
 
@@ -219,8 +218,8 @@ class MainWindow(QMainWindow):
         if color == "green":
             self.logs_textbox.setTextColor(Qt.green)
             found_vulnerabilities += 1
-        elif color == "red":
-            self.logs_textbox.setTextColor(Qt.red)
+        elif color == "white":
+            self.logs_textbox.setTextColor(Qt.white)
         else:
             self.logs_textbox.setTextColor(Qt.black)
 
